@@ -27,6 +27,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_KERNEL_CONFIG := lk_defconfig
 TARGET_KERNEL_SOURCE := kernel/moto/shamu
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := sm-arm-eabi-4.8/bin/arm-eabi-
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE :=  2048
@@ -166,4 +167,4 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
--include vendor/moto/shamu/BoardConfigVendor.mk
+-include vendor/motorola/shamu/BoardConfigVendor.mk
