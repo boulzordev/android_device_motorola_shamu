@@ -19,7 +19,6 @@
 #
 # Everything in this directory will become public
 
-
 PRODUCT_COPY_FILES += \
     device/motorola/shamu/init.shamu.rc:root/init.shamu.rc \
     device/motorola/shamu/init.shamu.power.rc:root/init.shamu.power.rc \
@@ -155,6 +154,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Audio effects
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
+    libqcompostprocbundle \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors
 
@@ -163,10 +163,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     fmas.spkr_2ch=35,25 \
     fmas.spkr_angles=10 \
     fmas.spkr_sgain=0 \
-    lpa.decode=false \
-    lpa.releaselock=false \
-    lpa.use-stagefright=false \
-    tunnel.decode=false
 
 PRODUCT_PACKAGES += \
     libqomx_core \
@@ -333,10 +329,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
    dalvik.vm.heapgrowthlimit=256m
-
-# F2FS
-PRODUCT_COPY_FILES += \
-    device/motorola/shamu/format-system.sh:system/bin/format-system.sh
 
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)

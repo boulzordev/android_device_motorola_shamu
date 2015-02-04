@@ -1,0 +1,7 @@
+[
+  {
+  "repository": "mydongistiny/android_kernel_motorola_shamu",
+  "target_path": "kernel/motorola/shamu",
+  "branch": "cm-12.0"
+  }
+]
